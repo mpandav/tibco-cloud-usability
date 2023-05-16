@@ -36,6 +36,7 @@ May 16 19:30:25 192.168.2.183 [a:tibtunnel:a][52058]: {"timestamp":1684258225,"t
 May 16 19:30:25 192.168.2.183 [a:tibtunnel:a][52058]: {"timestamp":1684258225,"time":"2023-05-16T19:30:25.620Z","level":"INFO","app":"tibtunnel","message":"tibtunnel(ad81821dd3e9): (M) negotiated protocol: v3"}
 192.168.2.183 [a:tibagent:a][20]: {"timestamp":1684258225,"time":"2023-05-16T19:30:25.577Z","level":"DEBUG","app":"tibagent","message":"Agent started with data-chunk-size=32KB"}
 May 16 19:30:25 192.168.2.183
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/fa79b6f8-abad-4ff8-90ae-54e31f7b9f8e)
 
 ## Steps to follow from BWCE Application
 Follow below outlined steps to connect bwce app docker container to running tibagent so it will be available to TIBCO cloud for monitoring
@@ -48,4 +49,11 @@ HYBRID_AGENT_REGISTER_ATTEMPTS : default 10
 HYBRID_AGENT_REGISTER_DELAY: default 10000 ms
 
 ### Deploy aplication
+
 docker run -e TCI_HYBRID_AGENT_HOST="10.97.98.107"  -e TCI_HYBRID_AGENT_PORT="7816" -e BW_LOGLEVEL="INFO" <repo>/<image>:<version>
+  
+  ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/52222734-cec6-42a6-9157-c1869798d252)
+  
+##  TIBCO Cloud Control Pane
+  ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/33187d5c-3cc2-4db7-8a9f-f3559b72f5b4)
+
