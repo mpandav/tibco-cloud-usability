@@ -3,17 +3,17 @@
 ### **API Access Key** 
 For DB service and hybrid connectivity in Flogo tester<br><br>
 Name: mpandav<br>
-Value: 0sIC3+vWOXCO11y9eFfqnKb1Q9tirsZG3hRqG6HtY3s
+Value: 0sIC3+xxxx
 
 ### **Oauth Token**
 For authorization of the tibagent with TIBCO Cloud<br><br>
 Name: tibagent_demo<br>
-Value: CIC~GxDa5Ad3E7Xgt97rxjJY1oiL
+Value: CIC~xxxxx
 
 
 ## 1. Login
 mpandav@mpandav-m1 TCI % ./tibagent_latest authorize <br>
-AccessToken: CIC~GxDa5Ad3E7Xgt97rxjJY1oiL
+AccessToken: CIC~xxxx
 You've successfully logged into organization: " SC-DACH eu-west-1 " 
 
 ## 2. Configure Agent
@@ -59,6 +59,9 @@ mpandav@mpandav-m1 TCI %
 ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/060715a2-9fe4-4f32-af81-34c3cbd8976d)
 
 ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/1ce2af4a-dd3b-4478-8f88-a3b37806881d)
+
+## TIBCO Cloud Control Pane
+See how it looks after applying the config to the k8s cluster.
 
 ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/4611d07c-0928-4872-9d2e-77fe34ceb996)
 
