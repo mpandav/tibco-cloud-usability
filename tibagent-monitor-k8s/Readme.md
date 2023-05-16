@@ -63,6 +63,8 @@ mpandav@mpandav-m1 TCI %
 ## TIBCO Cloud Control Pane
 See how it looks after applying the config to the k8s cluster.
 
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/767bf876-cba1-48e8-81c3-544874e9c39d)
+
 ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/4611d07c-0928-4872-9d2e-77fe34ceb996)
 
 ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/93f70365-6f9c-49ea-a937-f103f2a58f18)
