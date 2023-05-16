@@ -50,7 +50,7 @@ HYBRID_AGENT_REGISTER_DELAY: default 10000 ms
 
 ### Deploy aplication
 
-docker run -e TCI_HYBRID_AGENT_HOST="10.97.98.107"  -e TCI_HYBRID_AGENT_PORT="7816" -e BW_LOGLEVEL="INFO" <repo>/<image>:<version>
+docker run -e TCI_HYBRID_AGENT_HOST="10.97.98.107"  -e TCI_HYBRID_AGENT_PORT="7816" -e BW_LOGLEVEL="INFO" repo/image:version
   
   ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/52222734-cec6-42a6-9157-c1869798d252)
   
