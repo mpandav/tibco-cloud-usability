@@ -53,3 +53,16 @@ Starting tibagent 'tibagent-agent001' on k8s [namespace: default]
 service/tibagent-service-agent001 unchanged
 deployment.apps/tibagent-agent001 created
 mpandav@mpandav-m1 TCI % 
+
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/3614ba50-6e8f-4812-ae61-0f10d0ca24d0)
+
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/060715a2-9fe4-4f32-af81-34c3cbd8976d)
+
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/1ce2af4a-dd3b-4478-8f88-a3b37806881d)
+
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/4611d07c-0928-4872-9d2e-77fe34ceb996)
+
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/93f70365-6f9c-49ea-a937-f103f2a58f18)
+
+
+
