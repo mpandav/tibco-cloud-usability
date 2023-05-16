@@ -1,2 +1,2 @@
 # tibco-cloud-usability
-This contains notes and how-to information on TIBCO Cloud utilities
+This contains notes and know-how information on TIBCO Cloud Tools and terminology around.
