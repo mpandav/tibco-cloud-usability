@@ -1,4 +1,4 @@
-# How to monitor BWCE app running in Local Docker Container in TCI
+# How to monitor BWCE app running in Local Docker Container in TCI? (#Deprecated)
 
 Monitor a container running app from TCI control pane.
 
