@@ -16,7 +16,8 @@ Follow below steps to create and configure the tibagent process. This will run a
     Agent 'agent002' was configured
 
 ### 3. Create connect profile with accessKey and secretKey
-Start the agent with accessKey and secretKey so any application using this Key will be able to connect with onPrem and all the application connecting to this Host & configure port will be visible in TIBCO Cloud.<br/>
+Start the agent with accessKey and secretKey so any application using this Key will be able to connect with onPrem and all the application connecting to this Host & configure port will be visible in TIBCO Cloud.
+
     mpandav@mpandav-m1 TCI % ./tibagent_latest configure connect --accessSecret 0sIC3+xxxxxx --accessKey mpandav agent002                       
     Configuring connect [DONE]                 
     Connect 'agent002' was configured
