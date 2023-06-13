@@ -42,31 +42,34 @@ Before deploying the BWCEMon we need to satisfy few prequisites:
 - A Database instance to store the application monitoring information. You can find supported DB types and versions here.
 - Make sure that your DB instance is up & running and rechable from BWCEMon host.
 
-#### 1. Deploy as a Standalone Container:
+### 1. Deploy as a K8S Service:
+
+To deploy BWCEMon in K8S environment as a service, pls use deployment.yml configuration provided here. 
+
+        kubectl apply -f bwce-mon-deployment.yml
+
+    - BWCE Monitoring Application is now ready and available on configured port.
+
+    ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/972e67d2-f308-4dda-ac22-3d5e192a57df)
+
+    - BWCEMon Replication Controller
+
+    ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/6c68852a-f1a6-4ae1-a5db-df3121f3bc65) 
+
+    - BWCEMon POD configurtion
+    
+    ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/2200d98d-5894-4ba3-ae8c-bd09bd4b60ab)
+
+
+
+### 2. Deploy as a Standalone Container:
 
 To deploy a BWCEMon in standalone container run below docker command. In my case, I will be using postgresql server as a data store for monitoring data.
 
     docker run -p 8080:8080 -e PERSISTENCE_TYPE="postgres" -e DB_URL="postgresql://postgres:Tibco321@xx.xxx.xx.xxx:5432/postgres" --name bwce-monitoring-282 mpandav/bwce-monitoring:282
 ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/1cdb7026-9d8b-406f-a264-09492fc4eac2)
 
+Your BWCEMon app is now ready and accessible on http://localhost:8080 as shown below,
 
-#### 2. Deploy as a K8S Service:
-
-To deploy BWCEMon in K8S environment as a service, pls use deployment.yml configuration provided here. 
-
-        kubectl apply -f bwce-mon-deployment.yml
-
-- BWCE Monitoring Application is now ready and available on configured port.
-
-    ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/972e67d2-f308-4dda-ac22-3d5e192a57df)
-
-- BWCEMon Replication Controller
-
-    ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/6c68852a-f1a6-4ae1-a5db-df3121f3bc65) 
-
-- BWCEMon POD configurtion
-    
-    ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/2200d98d-5894-4ba3-ae8c-bd09bd4b60ab)
-
-
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/cc3a6c75-80d3-4e23-9fe6-b0d2aa31745a)
 
