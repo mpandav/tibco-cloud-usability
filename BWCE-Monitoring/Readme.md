@@ -48,15 +48,15 @@ To deploy BWCEMon in K8S environment as a service, pls use deployment.yml config
 
         kubectl apply -f bwce-mon-deployment.yml
 
-    - BWCE Monitoring Application is now ready and available on configured port.
+- BWCE Monitoring Application is now ready and available on configured port.
 
     ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/972e67d2-f308-4dda-ac22-3d5e192a57df)
 
-    - BWCEMon Replication Controller
+- BWCEMon Replication Controller
 
     ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/6c68852a-f1a6-4ae1-a5db-df3121f3bc65) 
 
-    - BWCEMon POD configurtion
+- BWCEMon POD configurtion
     
     ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/2200d98d-5894-4ba3-ae8c-bd09bd4b60ab)
 
