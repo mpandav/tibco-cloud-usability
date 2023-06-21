@@ -11,13 +11,17 @@ Let's understand how to use TIBCO EMS development instance in docker or k8s env.
 
 You need to follow the below steps before using TIBCO EMS in environment:
 
-1. Download the TIBCO EMS from official TIBCO download site
-2. Build EMS Docker Image
+1. Where to find information on how to it?
+2. How to build EMS Docker Image with non-default base OS?
 3. Deploy the EMS Image to container env (stanalone container, K8S, OC)
 
 
 Let's see how we can do all these in simple steps:
 
-## 1. Download the TIBCO EMS from official TIBCO download site
-## 2. Build EMS Docker Image
+## 1. Where to find information on how to it?
+
+
+## 2. How to build EMS Docker Image with non-default base OS?
+
+
 ## 3. Deploy the EMS Image to container env (stanalone container, K8S, OC)
