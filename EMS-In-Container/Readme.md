@@ -3,7 +3,7 @@ The TIBCO Enterprise Message Service™ allows you to send and receive messages 
 
 Here we will understand how you can deploy or run TIBCO EMS in containerized world (in K8S or OC).
 
-    NOTE : We will use non-default base OS (eclipse-temurin:11-jre-focal) to build the EMS container image; the default base OS is cent:7.
+    NOTE : We're using non-default base OS (eclipse-temurin:11-jre-focal) to build the EMS container image; the default base OS is cent:7.
 
 # How to download, build and deploy TIBCO EMS in Container?
 
@@ -25,5 +25,13 @@ Let's see how we can do all these in simple steps:
  
 ## 2. How to build EMS Docker Image with non-default base OS?
 
+### 2.1 Select base OS & Identify Package Manager:
+- Once you choose which base OS you are planning to use then identify the correct package manager to install required packages needed by EMS instance to RUN
+- We are using eclipse-temurin:11-jre-focal as a base OS which is debian based Operating System; so we are using apt package manager
+
+### 2.2 Update the tibemsfilescreateimage Script 
+- Unzip the tibemsd_10.2_files_kubernetes.zip in /tmp/ location
+- Look for a script file named tibemsfilescreateimage under directory ../tibemsd_10.2_files_kubernetes/docker/bin/ and take a good look at the script file to understand the functioning of the same.
+- 
 
 ## 3. Deploy the EMS Image to container env (stanalone container, K8S, OC)
