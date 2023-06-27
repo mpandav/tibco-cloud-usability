@@ -1,9 +1,9 @@
 # TIBCO Enterprise Messaging Service in Container
-The TIBCO Enterprise Message Service™ allows you to send and receive messages from your applications in a format that conforms to the Jakarta Messaging specification (JMS). 
+The TIBCO Enterprise Message Service™ allows you to send and receive messages from your applications in a format that conforms to the Jakarta Messaging specification (JMS).
 
-Here we will understand how you can deploy or run TIBCO EMS in containerized world ()in K8S & OopenShift).
+Here we will understand how you can deploy or run TIBCO EMS in containerized world (in K8S or OC).
 
-In this tutorial, we will be using non-default base OS (eclipse-temurin:11-jre-focal) to build the EMS container image; the base os is cent:7.
+    NOTE : We will use non-default base OS (eclipse-temurin:11-jre-focal) to build the EMS container image; the default base OS is cent:7.
 
 # How to download, build and deploy TIBCO EMS in Container?
 
@@ -19,8 +19,10 @@ You need to follow the below steps before using TIBCO EMS in environment:
 Let's see how we can do all these in simple steps:
 
 ## 1. Where to find information on how to it?
-
-
+- Download the below listed files from [TIBCO Community](https://community.tibco.com/s/article/how-configure-tibco-enterprise-message-service-tm-kubernetes-docker)
+  - **TIBCO EMS 10 Kubernetes Files.zip**:<br> _It contains the necessary scripts, configuration files and binaries to build a EMS container image and deploy it in any K8S environment._
+  - **TIBCO EMS on Kubernetes v1.3.pdf**: :<br> _A document that describes and demonstrate the step-by-step process in the journey._
+ 
 ## 2. How to build EMS Docker Image with non-default base OS?
 
 
