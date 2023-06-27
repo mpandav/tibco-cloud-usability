@@ -33,7 +33,9 @@ Let's see how we can do all these in simple steps:
 - Unzip the tibemsd_10.2_files_kubernetes.zip in /tmp/ location
 - Look for a script file named tibemsfilescreateimage under directory ../tibemsd_10.2_files_kubernetes/docker/bin/ and take a good look at the script file to understand the functioning of the same.
 - 
-
+### Build the EMS docker image
+-
+- 
 ## 3. Deploy the EMS Image to container env (stanalone container, K8S, OC)
 
 # Reference
