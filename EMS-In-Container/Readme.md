@@ -83,10 +83,10 @@ Let's see how we can do all these in simple steps:
         echo Copying the EMS installation zip file
         cp ${EMS_DOWNLOAD} ${DOCKER_BUILD_DIR}/tmp || die Unable to copy EMS installer
         
-        docker buildx build --platform linux/arm64,linux/amd64 ${SQUASH} --build-arg=JAVA_DIR=${JAVA_DIR} -t mpandav/ems:${TAG_NAME} ${DOCKER_BUILD_DIR}/tmp --push || die docker build failed
+        docker buildx build --platform linux/arm64,linux/amd64 ${SQUASH} --build-arg=JAVA_DIR=${JAVA_DIR} -t <repository>/ems:${TAG_NAME} ${DOCKER_BUILD_DIR}/tmp --push || die docker build failed
 
         # comment below code to use buildx feature
-        # docker tag mpandav/ems:${TAG_NAME} ems:latest || die unable to tag docker build
+        # docker tag <repository>/ems:${TAG_NAME} ems:latest || die unable to tag docker build
 
 - After above changes our script is now ready for action.
 
@@ -99,6 +99,12 @@ Let's see how we can do all these in simple steps:
 
   
 ## 3. Deploy the EMS Image to container env (stanalone container, K8S, OC)
+In this tutorial, we are deploying and starting the EMS container in standalone docker container, but user can refer to deployment configuration files provided in the .zip file under /kubernetes/ for each of the main stream K8S service provider. 
+
+- To start or deploy EMS in standalone container, you need to execute below docker command: 
+
+      docker run -p 7222:7222 -v pwd:/shared <repository>/ems:10.2.1
+  We are using volume to store the EMS datastore, configurations and logs in present working directory/shared from where we are running the container. 
 
 # Reference
-- [Docker Image](https://hub.docker.com/r/mpandav/ems) for reference.
+- A sample [Docker Image](https://hub.docker.com/r/mpandav/ems) for your reference.
