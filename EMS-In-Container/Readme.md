@@ -31,8 +31,65 @@ Let's see how we can do all these in simple steps:
 
 ### Update the tibemsfilescreateimage Script 
 - Unzip the tibemsd_10.2_files_kubernetes.zip in /tmp/ location
-- Look for a script file named tibemsfilescreateimage under directory ../tibemsd_10.2_files_kubernetes/docker/bin/ and take a good look at the script file to understand the functioning of the same.
-- 
+- Look for a script file named tibemsfilescreateimage under directory ../tmp/tibemsd_10.2_files_kubernetes/docker/bin/ and take a good look at the script file to understand the functioning of the same.
+- You need to edit/update the Dockerfile Contents (starting at line 192) to change the base-os, installation packages, etc. as below,
+
+        cat > ${DOCKER_BUILD_DIR}/tmp/Dockerfile <<DOCKERFILE
+        FROM eclipse-temurin:11-jre-focal
+        MAINTAINER TIBCO Software Inc.
+        ARG JAVA_DIR
+        VOLUME /shared
+        EXPOSE 7222
+        EXPOSE 7220
+        ENTRYPOINT [ "tibems.sh" ]
+        CMD []
+        WORKDIR /install
+        
+        RUN mkdir -p /home/user /opt/tibco/ems/docker/{jdbc,security,ftl,rv} /opt/${JAVA_DIR} /shared
+        RUN groupadd -g ${GROUP_ID}  tibgroup && useradd -m -d /home/user/tibuser -r -u ${USER_ID} -g tibgroup tibuser
+        
+        RUN chown -R tibuser:tibgroup /home/user/tibuser /opt/tibco /opt/${JAVA_DIR} /shared /install
+        
+        ENV EMS_SERVICE_NAME=emsserver
+        ENV EMS_NODE_NAME=localhost
+        ENV EMS_PUBLIC_PORT=7222
+        ENV EMS_PROBE_PORT=7220
+        
+        
+        RUN apt-get update && apt-get --no-install-recommends -y install unzip ssh net-tools \ 
+        && apt-get -y install xsltproc && apt-get clean && rm -rf /var/lib/apt/lists/*
+        
+        COPY --chown=tibuser:tibgroup . /install
+        
+        USER tibuser
+        
+        RUN /install/ems_install.sh
+        RUN mv /install/*configbase.* /opt/tibco/ems/docker
+        RUN mv /install/tibems.sh /opt/tibco/ems/docker
+        
+        ${install_java_instructions}
+        
+        RUN rm -rf /install/*
+        
+        ENV PATH=".:/opt/tibco/ems/${MAJOR_MINOR}/bin:/opt/\${JAVA_DIR}/bin:/opt/tibco/ems/docker:\${PATH}"
+
+- In this tutorial, we are using docker buildx to build the multi-platform docker images. To use docker buildx we need to update the script a bit starting at line 492 as shown below,
+
+        chmod +x ${DOCKER_BUILD_DIR}/tmp/*.sh
+  
+        [[ "${CREATE_IMAGE_FILE}" = "true" ]] && DOCKER_IMAGE_FILE_NAME=ems-${TAG_NAME}.dockerimage.xz
+        docker_image_summary
+        
+        echo Copying the EMS installation zip file
+        cp ${EMS_DOWNLOAD} ${DOCKER_BUILD_DIR}/tmp || die Unable to copy EMS installer
+        
+        docker buildx build --platform linux/arm64,linux/amd64 ${SQUASH} --build-arg=JAVA_DIR=${JAVA_DIR} -t mpandav/ems:${TAG_NAME} ${DOCKER_BUILD_DIR}/tmp --push || die docker build failed
+
+        # comment below code to use buildx feature
+        # docker tag mpandav/ems:${TAG_NAME} ems:latest || die unable to tag docker build
+
+- After above changes our script is now ready for action.
+
 ### Build the EMS docker image
 -
 - 
