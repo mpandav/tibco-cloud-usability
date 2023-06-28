@@ -91,8 +91,13 @@ Let's see how we can do all these in simple steps:
 - After above changes our script is now ready for action.
 
 ### Build the EMS docker image
--
-- 
+- To build the EMS container image, execute the updated the script "**tibemsfilescreateimage**"
+
+        $ ./tibemsfilescreateimage
+- This will create and push the docker image to your docker hub repository as shown in below snapshot. You also can verify the build logs for more details...
+  ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/c059039a-b1e7-4623-ae84-6e1face9bb60)
+
+  
 ## 3. Deploy the EMS Image to container env (stanalone container, K8S, OC)
 
 # Reference
