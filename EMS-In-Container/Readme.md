@@ -5,7 +5,7 @@ Here we will understand how you can deploy or run TIBCO EMS in containerized wor
 
     NOTE : We're using non-default base OS (eclipse-temurin:11-jre-focal) to build the EMS container image; the default base OS is cent:7.
 
-# How to download, build and deploy TIBCO EMS in Container?
+# How to Deploy TIBCO EMS in Container?
 
 Let's understand how to use TIBCO EMS development instance in docker or k8s env. I will be using EMS 10.2.1 for the purpose.
 
