@@ -1,12 +1,15 @@
 # TIBCO Enterprise Messaging Service in Container
 The TIBCO Enterprise Message Service™ allows you to send and receive messages from your applications in a format that conforms to the Jakarta Messaging specification (JMS).
 
-In this tutorial, we will try to find out how user can deploy the TIBCO EMS Server in containerized environment (docker, k8s, oc) using non-default base OS.
+
+---
+
+> NOTE: We are using eclipse-temurin:11-jre-focal as a bsase OS to build the EMS container image; the default base OS is cent:7.
+
+---
 
 
-> **_NOTE:_**  We are using eclipse-temurin:11-jre-focal as a bsase OS to build the EMS container image; the default base OS is cent:7.
-
-# How to Deploy TIBCO EMS in Container?
+# How to Run TIBCO EMS in Container?
 
 Let's understand how to use TIBCO EMS Server in docker or k8s env. I will be using EMS 10.2.1 for this tutorial purpose.
 
@@ -105,7 +108,13 @@ In this tutorial, we are deploying and starting the EMS container in standalone 
 - To start or deploy EMS in standalone container, you need to execute below docker command: 
 
       docker run -p 7222:7222 -v pwd:/shared <repository>/ems:10.2.1
-  We are using volume to store the EMS datastore, configurations and logs in present working directory/shared from where we are running the container. 
+  We are using volume to store the EMS datastore, configurations and logs in provided directory/shared.
+  
+  ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/96f4b985-24d3-410d-9c1b-d976c106f693)
+
+  ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/e380bd23-05bd-4666-b229-025979fea86f)
+
+
 
 # Reference
 - A sample [Docker Image](https://hub.docker.com/r/mpandav/ems) for your reference.
