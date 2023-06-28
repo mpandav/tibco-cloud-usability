@@ -19,7 +19,7 @@ You need to follow the below steps before using TIBCO EMS in environment:
 2. How to build EMS Docker Image with non-default base OS?
 3. Deploy the EMS Image to container env (stanalone container, K8S, OC)
 
-
+ q
 Let's see how we can do all these in simple steps:
 
 ## 1. Where to find information on how to it?
