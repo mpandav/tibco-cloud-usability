@@ -1,5 +1,5 @@
-# Deploy EMS in K8S
+# Deploy EMS in K8S <inprogress...>
 
-## Creating deployment configuration
+## Creating Deployment Configuration
 
 ## Deploy EMS Serevr
