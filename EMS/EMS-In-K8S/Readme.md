@@ -1,5 +1,9 @@
 # Deploy EMS in K8S <inprogress...>
 
-## Creating Deployment Configuration
+## Build Deployment prerequisites
+
+### Create PV to storage
+
+### Create deployment.yml 
 
 ## Deploy EMS Serevr
