@@ -1,7 +1,7 @@
 # Deploy tibagent in K8S Cluster to Manage and Monitor the local apps
 
 ### **API Access Key** 
-For DB service and hybrid connectivity in Flogo tester
+For DB service and hybrid connectivity in Flogo tester and hybrid connectivity of apps.
 
     Name: keyName
     Value: 0sIC3+xxxx
