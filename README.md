@@ -9,7 +9,7 @@ This contains notes and know-how step-by-step information on TIBCO onPrem and Cl
 
 - EMS:
   - [Run EMS Server in Container Env](EMS/EMS-In-Container/Readme.md) <br> A step-by-step guide on how to deploy EMS Server v10.2.1 in the Containerized Environemnt. This demonstrate usage of non-default base image for container image building.
-  - 
+  - [Deploy EMS Server in K8S Env](EMS/EMS-In-Container/Readme.md) <br> A step-by-step guide on how to deploy EMS Server v10.2.1 in the K8S.
 
 - TCI:
   - [Hybrid AGENT: Monitor for standalone BWCE App Containers from TCI](TCI/tibagent-monitor-docker-container/README.md) <br> Using hybrid agent for standalone BWCE docker container monitoring from TIBCO Cloud Integration
