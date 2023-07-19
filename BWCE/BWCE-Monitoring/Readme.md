@@ -1,4 +1,4 @@
-# TIBCO BWCE Monitoring
+# TIBCO BWCE Monitoring App (BWCEMon)
 
 A build in tool for monitoring the TIBCO BWCE containers deployed in the kubernates or Openshift or docker environment. 
 
