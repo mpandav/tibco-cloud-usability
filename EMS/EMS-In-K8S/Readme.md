@@ -6,4 +6,4 @@
 
 ### Create deployment.yml 
 
-## Deploy EMS Serevr
+## Deploy EMS Serevr to K8S
