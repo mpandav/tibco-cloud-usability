@@ -13,13 +13,13 @@ This contains notes and know-how step-by-step information on TIBCO onPrem and Cl
   - [Deploy EMS Server in K8S Env](EMS/EMS-In-K8S/Readme.md) <br> A step-by-step guide on how to deploy EMS Server v10.2.1 in the K8S environment.
 
 - TCI:
-  - [Hybird AGENT: Deploy it inside Docker Container](TCI/tib-docker-agent-hybrid-connectivity/Readme.md) <br> Deplpy a hybrid agent in Docker Container by building own docker image and connect TIBCO Cloud Integration Applciations to Backed OnPrem Service.
+  - [Hybrid Connectivity (tibagent) : Deploy it inside Docker Container](TCI/tib-docker-agent-hybrid-connectivity/Readme.md) <br> Deplpy a hybrid agent in Docker Container by building own docker image and connect TIBCO Cloud Integration Applciations to Backed OnPrem Service.
     
-  - [Hybird AGENT: Deploy it inside K8S for Hybrid Connectivity](TCI/tib-docker-agent-hybrid-connectivity/Readme.md) <br> Deplpy a hybrid agent in K8S Cluster and connect TIBCO Cloud Integration Applciations to Backed OnPrem Service. 
+  - [Hybrid Connectivity (tibagent) : Deploy it inside K8S Cluster](TCI/tibagent-hybrid-connectivity-k8s/Readme.md) <br> Deplpy a hybrid agent in K8S Cluster by following the step-by-step guided example and connect TIBCO Cloud Integration Applciations to Backed OnPrem Service. 
     
-  - [Hybrid AGENT: Monitor for standalone BWCE App Containers from TCI](TCI/tibagent-monitor-docker-container/README.md) <br> Using hybrid agent for standalone BWCE docker container monitoring from TIBCO Cloud Integration
+  - [Hybrid Monitoring (tibagent): Monitor for standalone BWCE App Containers from TCI](TCI/tibagent-monitor-docker-container/README.md) <br> Using hybrid agent for standalone BWCE docker container monitoring from TIBCO Cloud Integration
     
-  - [Hybird AGENT: Monitor K8S deployed BWCE Apps from TCI](TCI/tibagemt-monitor-k8s/Readme.md) <br> Monitor K8S deployed BWCE applications using hybrid agent in TIBCO Cloud Integration
+  - [Hybird Monitoring (tibagent): Monitor K8S deployed BWCE Apps from TCI](TCI/tibagemt-monitor-k8s/Readme.md) <br> Monitor K8S deployed BWCE applications using hybrid agent in TIBCO Cloud Integration
 
   - 
 
