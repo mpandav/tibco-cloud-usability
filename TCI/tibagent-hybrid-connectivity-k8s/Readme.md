@@ -12,7 +12,7 @@
      ./tibagent configure connect --accessSecret O5whWjnSsoAFSuMUJlMMrpWVlGzatRGnSgcGOb2LQkE  --accessKey mpandav_bw  kafkaagent001
 
 ## Generate K8S templates and config files
-   ./tibagent configure manage kafkaagent001
+     ./tibagent configure manage kafkaagent001
 
 ## Update tibagent.yaml file
 Edit the .yml file for tiagent-main section to add specification or source & targets to be connected.
