@@ -1,11 +1,11 @@
 # Deploy tibagent in K8S for Hybrid Connectivity
 
-## auth with TIBCO Cloud
+## Authenticate with TIBCO Cloud
 
      ./tibagent authorize --token CIC~PC7uutpANWTPbd9dROMaolEH 
 
 
-## Configure tib Agent
+## Configure tibagent
      ./tibagent configure agent -p 5150 kafkaagent001
 
 ## Configure to Hybrid connectivity with AccessKey & Secret
