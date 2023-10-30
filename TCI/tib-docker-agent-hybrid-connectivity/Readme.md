@@ -1,6 +1,6 @@
 # Run tibagent in Dokcker Container for Hybrid Connectivity
 
-## Steps to build a Docker
+## Steps to build a Docker Image
 - Download and exact the .zip into /tmp directory
 - Follow the step 1 and 2 documented here in TIBCO Support KA : https://support.tibco.com/s/article/Running-Hybrid-Agent-in-a-docker-container
 - Run a build-agent.sh to build a docker image
@@ -24,6 +24,8 @@
 
   ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/b1defcf7-c655-4954-84dd-10929193929c)
 
-- Run the tibagent in Docker Container
+## Run the tibagent in Docker Container
+
+- Create the Container out of generated Docker Image
 
   ![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/2d108564-407f-42b2-8c2f-f6a317c769c4)
