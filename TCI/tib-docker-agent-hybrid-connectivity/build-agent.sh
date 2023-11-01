@@ -32,8 +32,8 @@ echo "Configure Connectivity for tibagent [${agent}:${port} and ${spec}]..."
 echo
 echo ================================================================
 
- ./tibagent configure connect --config-dir . --accessSecret O5whWjnSsoAFSuMUJlMMrpWVlGzatRGnSgcGOb2LQkE  --accessKey mpandav_bw  ${agent}
-
+ ./tibagent configure connect --config-dir . --accessSecret ${accessSecret}  --accessKey ${accessKey}  ${agent}
+ 
 echo ================================================================
 echo
 echo "Building docker image to run Hybrid Agent [docker build --tag  ${image}/${agent}:${tag} 	--build-arg ARG_AGENT=${agent} 	--build-arg ARG_PORT=${port} --build-arg ARG_SPEC=${spec}] "
