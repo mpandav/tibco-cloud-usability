@@ -29,6 +29,3 @@ echo
 echo "Hybrid Agnet [ ${AGENT_NAME}:${AGENT_PORT} ] is Configured Successfully..."
 echo
 echo ================================================================
-
-pwd
-ls
