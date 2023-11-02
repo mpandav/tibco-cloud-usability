@@ -10,7 +10,7 @@ echo
 ./tibagent --version
 
 echo "========================="
-echo "Starting Hybrid Agent [${AGENT_NAME}@${AGENT_PORT} ..."
+echo "Starting Hybrid Agent [${AGENT_NAME}@${AGENT_PORT} ]..."
 echo "========================="
 
 if ($LOG_STREAM -eq "true") 
@@ -22,7 +22,7 @@ then {
         mkdir /opt/tci/logs
         logfile=${AGENT_NAME}.log
         ./tibagent start agent --config-dir . ${AGENT_SPEC} --logStream --log-file=/opt/tci/logs/${AGENT_NAME}.log ${AGENT_NAME} &
-        echo "Hybrid Agent  ${AGENT_NAME} Started..."
+        echo "Hybrid Agent [ ${AGENT_NAME} ] Started..."
         echo
         echo
         sleep 10
@@ -33,7 +33,7 @@ else {
         echo
         echo "./tibagent start agent --config-dir . ${AGENT_SPEC}  ${AGENT_NAME}"
         echo 
-        echo "Hybrid Agent  ${AGENT_NAME} Started..."
+        echo "Hybrid Agent [ ${AGENT_NAME} ] Started..."
         echo
         echo
         ./tibagent start agent --config-dir . ${AGENT_SPEC}  ${AGENT_NAME} 
