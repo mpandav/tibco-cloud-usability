@@ -34,4 +34,3 @@ The result of above executaion looks like something below:
 A sample  [Docker Image](https://hub.docker.com/r/mpandav/tibagent) for your reference.
 
 ### NOTE
-You must have to provide the **LOG_STREAM** enviroment variable while starting the container. it won't work with this variable as its controlling the behavior of hybrid agent.
