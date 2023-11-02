@@ -14,7 +14,7 @@
 
 ## Test the tibagent Image
 
-### Run it with for Hybrid Connectivity   
+### Run it with Hybrid Connectivity   
 - Run the docker image to verify if its configured correctly and working as per the expectation. Use docker RUN command as below,
 
       docker run  --name tibagent-demo -e AGENT_NAME=tibagent-demo -e AGENT_PORT=7188 -e AGENT_SPEC="--spec 9093:192.168.2.183:9093" -e ACCESS_TOKEN="CIC~xxxxx" -e ACCESS_SECRET="O5whxxxxxxxxx" -e ACCESS_KEY_NAME="xxxx_bw" -e LOG_STREAM=false mpandav/tibagent:latest
