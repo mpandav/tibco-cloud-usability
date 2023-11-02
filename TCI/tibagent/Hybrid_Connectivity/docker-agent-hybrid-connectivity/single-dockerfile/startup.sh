@@ -21,8 +21,10 @@ then {
         echo "====================================="
         mkdir /opt/tci/logs
         logfile=${AGENT_NAME}.log
-        ./tibagent -d start agent --config-dir . ${AGENT_SPEC} --logStream --log-file=/opt/tci/logs/${AGENT_NAME}.log ${AGENT_NAME} &
+        ./tibagent start agent --config-dir . ${AGENT_SPEC} --logStream --log-file=/opt/tci/logs/${AGENT_NAME}.log ${AGENT_NAME} &
         echo "Hybrid Agent  ${AGENT_NAME} Started..."
+        echo
+        echo
         sleep 10
         tail -f /opt/tci/logs/${AGENT_NAME}.log
     }
@@ -31,8 +33,10 @@ else {
         echo
         echo "./tibagent start agent --config-dir . ${AGENT_SPEC}  ${AGENT_NAME}"
         echo 
-        ./tibagent start agent --config-dir . ${AGENT_SPEC}  ${AGENT_NAME} 
         echo "Hybrid Agent  ${AGENT_NAME} Started..."
+        echo
+        echo
+        ./tibagent start agent --config-dir . ${AGENT_SPEC}  ${AGENT_NAME} 
 }
 fi
 echo "========================="
