@@ -2,21 +2,39 @@
 
 chmod 777 *
 . ./build-agent.sh
-
+echo 
 echo "========================="
 echo "TIBCO Cloud Integration Hybrid Agent [${AGENT_NAME}@${AGENT_PORT}]"
-echo "========================="
+echo 
+echo 
 ./tibagent --version
 
+echo "========================="
+echo "Starting Hybrid Agent [${AGENT_NAME}@${AGENT_PORT} ..."
+echo "========================="
 
-echo "================================================================"
-echo
-echo "./tibagent start agent --config-dir . ${AGENT_SPEC}  ${AGENT_NAME}"
-echo
-echo "================================================================"
-
-./tibagent start agent --config-dir . ${AGENT_SPEC}  ${AGENT_NAME}
-
+if ($LOG_STREAM -eq "true") 
+then {
+        echo "With Log streaming"
+        echo "./tibagent -d start agent --config-dir . ${AGENT_SPEC} --logStream  --logStreamPort=7111 --log-file=/opt/tci/logs/${AGENT_NAME}.log ${AGENT_NAME}"
+        echo 
+        echo "====================================="
+        mkdir /opt/tci/logs
+        logfile=${AGENT_NAME}.log
+        ./tibagent -d start agent --config-dir . ${AGENT_SPEC} --logStream --log-file=/opt/tci/logs/${AGENT_NAME}.log ${AGENT_NAME} &
+        echo "Hybrid Agent  ${AGENT_NAME} Started..."
+        sleep 10
+        tail -f /opt/tci/logs/${AGENT_NAME}.log
+    }
+else {
+        echo "Without Log Streaming" 
+        echo
+        echo "./tibagent start agent --config-dir . ${AGENT_SPEC}  ${AGENT_NAME}"
+        echo 
+        ./tibagent start agent --config-dir . ${AGENT_SPEC}  ${AGENT_NAME} 
+        echo "Hybrid Agent  ${AGENT_NAME} Started..."
+}
+fi
 echo "========================="
 echo "Hybrid Agent ended"
 echo "========================="

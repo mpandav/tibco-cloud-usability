@@ -5,7 +5,8 @@ LABEL maintainer="Cloud Software Group, Inc."
 
 WORKDIR /opt/tci/bin
 
-#INCOMING ARGUMENTS
+# ARGUMENTS
+#ARG ARG_LOG_STREAM_FILE=/opt/tci/logs/${AGENT_NAME}.log
 
 #Environment variables
 ENV AGENT_NAME=""
@@ -16,7 +17,7 @@ ENV ACCESS_SECRET=""
 ENV ACCESS_KEY_NAME=""
 ENV LOG_STREAM=false
 ENV LOG_STREAM_PORT=""
-ARG LOG_STREAM_FILE=/opt/tci/logs/${AGENT_NAME}.log
+#ENV LOG_STREAM_FILE=/opt/tci/logs/${AGENT_NAME}.log
 
 COPY  . /opt/tci/bin/
 RUN { \
@@ -25,6 +26,7 @@ RUN { \
   apt-get install -y vim; \
   apt-get install -y iputils-ping; \
   apt-get install --no-install-recommends -y ca-certificates; \
+  apt-get install -y  socat; \
 }
 
 #ENV LANG C.UTF-8
