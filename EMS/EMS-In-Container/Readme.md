@@ -117,4 +117,4 @@ In this tutorial, we are deploying and starting the EMS container in standalone 
 
 
 # Reference
-- A sample [Docker Image](https://hub.docker.com/r/mpandav/ems) for your reference.
+
