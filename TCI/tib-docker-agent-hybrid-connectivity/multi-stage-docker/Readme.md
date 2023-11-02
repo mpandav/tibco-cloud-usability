@@ -1,4 +1,4 @@
-# Multi-stage Docker Build for Hybridagents Docker Image (Hybrid Connectivity)
+# Multi-stage Docker Build for tibagent Docker Image (Hybrid Connectivity)
 
 ## Steps to build a Docker Image
 - Download and exact the .zip into /tmp directory
