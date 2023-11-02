@@ -16,7 +16,7 @@ echo "========================="
 if ($LOG_STREAM -eq "true") 
 then {
         echo "With Log streaming"
-        echo "./tibagent -d start agent --config-dir . ${AGENT_SPEC} --logStream  --logStreamPort=7111 --log-file=/opt/tci/logs/${AGENT_NAME}.log ${AGENT_NAME}"
+        echo "./tibagent start agent --config-dir . ${AGENT_SPEC} --logStream  --logStreamPort=7111 --log-file=/opt/tci/logs/${AGENT_NAME}.log ${AGENT_NAME}"
         echo 
         echo "====================================="
         mkdir /opt/tci/logs
