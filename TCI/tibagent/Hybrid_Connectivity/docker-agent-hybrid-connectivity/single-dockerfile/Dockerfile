@@ -1,4 +1,3 @@
-# multi-stage docker build process
 # Building tibAgent for Hybrid Connectivity
 FROM ubuntu:latest
 LABEL maintainer="Cloud Software Group, Inc."
