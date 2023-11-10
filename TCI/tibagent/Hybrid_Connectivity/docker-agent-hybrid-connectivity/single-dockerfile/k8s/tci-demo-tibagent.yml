@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tci-poc-test
+  labels:
+    typeserv: tci-poc-test
+spec:
+  selector:
+    matchLabels:
+      typeserv: tci-poc-test
+  strategy:
+    type: Recreate
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        typeserv: tci-poc-test
+    spec:
+      containers:
+      - name: tibagent-kafkaagent007
+        #image: registry.tools.3stripes.net/pea-coreintegration/tibagent-tci:kafkaagent001
+        image: mpandav/tibagent:latest
+        imagePullPolicy: Always
+        env:
+        - name: AGENT_SPEC
+          value: "--spec 9094:xxx.xxx.xx.xxx:9094"
+        - name: AGENT_NAME
+          value: "agent007"
+        - name: AGENT_PORT
+          value: "7188"
+        - name: ACCESS_TOKEN
+          value: "CIC~xxxx"
+        - name: ACCESS_SECRET
+          value: "/TS+xxxxxx"
+        - name: LOG_STREAM
+          value: "false"
+        - name: ACCESS_KEY_NAME
+          value: "mp_local_test"
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "768Mi"
+            cpu: "1"
+      terminationGracePeriodSeconds: 90
+      imagePullSecrets:
+      - name: registry-tools-3stripes-net-cred
