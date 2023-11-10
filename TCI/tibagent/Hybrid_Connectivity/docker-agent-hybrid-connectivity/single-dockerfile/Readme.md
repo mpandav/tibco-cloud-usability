@@ -30,6 +30,20 @@ The result of above executaion looks like something below:
 
 <img width="1728" alt="image" src="https://github.com/mpandav/tibco-cloud-usability/assets/38240734/8804c4d8-3c07-4f92-a656-fb4d90d9f2ab">
 
+### Deploy in K8S Cluster
+Use the deployment .yml file from K8S folder, update required environment variables as per your Environmen and using kubeclt push to k8s cluster.
+Ex. 
+
+            kubectl apply -f ~./tibagent/tci-demo-tibagent.yml
+
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/f2036369-1165-4391-a30a-7cf1fcc98e2b)
+
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/8516d094-b826-4ecf-b44a-d959202d48a4)
+
+![image](https://github.com/mpandav/tibco-cloud-usability/assets/38240734/862b548a-ddc5-49d2-977e-364cabee1a75)
+
+
+
 ## Refrerence
 A sample  [Docker Image](https://hub.docker.com/r/mpandav/tibagent) for your reference.
 
