@@ -9,6 +9,7 @@ echo
 echo 
 ./tibagent --version
 
+
 echo "========================="
 echo "Starting Hybrid Agent [${AGENT_NAME}@${AGENT_PORT} ]..."
 echo "========================="
@@ -16,12 +17,12 @@ echo "========================="
 if ($LOG_STREAM -eq "true") 
 then {
         echo "With Log streaming"
-        echo "./tibagent start agent --config-dir . ${AGENT_SPEC} --logStream  --logStreamPort=7111 --log-file=/opt/tci/logs/${AGENT_NAME}.log --data-chunk-size 2048 ${AGENT_NAME}"
+        echo "./tibagent start agent --config-dir . ${AGENT_SPEC} --logStream  --logStreamPort=7111 --log-file=/opt/tci/logs/${AGENT_NAME}.log --data-ack-mode  ${DATA_ACK_MODE} --data-chunk-size ${DATA_CHUNK_SIZE} ${AGENT_NAME}"
         echo 
         echo "====================================="
         mkdir /opt/tci/logs
         logfile=${AGENT_NAME}.log
-        ./tibagent start agent --config-dir . ${AGENT_SPEC} --logStream --log-file=/opt/tci/logs/${AGENT_NAME}.log --data-chunk-size 2048 ${AGENT_NAME} &
+        ./tibagent start agent --config-dir . ${AGENT_SPEC} --logStream --log-file=/opt/tci/logs/${AGENT_NAME}.log --data-ack-mode  ${DATA_ACK_MODE} --data-chunk-size ${DATA_CHUNK_SIZE} ${AGENT_NAME} &
         echo "Hybrid Agent [ ${AGENT_NAME} ] Started..."
         echo
         echo
@@ -31,12 +32,12 @@ then {
 else {
         echo "Without Log Streaming" 
         echo
-        echo "./tibagent start agent --config-dir . ${AGENT_SPEC}  --data-ack-mode false --data-chunk-size 2048 ${AGENT_NAME}"
+        echo "./tibagent start agent --config-dir . ${AGENT_SPEC}  --data-ack-mode  ${DATA_ACK_MODE} --data-chunk-size ${DATA_CHUNK_SIZE} ${AGENT_NAME}"
         echo 
         echo "Hybrid Agent [ ${AGENT_NAME} ] Started..."
         echo
         echo
-        ./tibagent start agent --config-dir . ${AGENT_SPEC} --data-ack-mode false --data-chunk-size 2048 ${AGENT_NAME} 
+        ./tibagent start agent --config-dir . ${AGENT_SPEC} --data-ack-mode  ${DATA_ACK_MODE} --data-chunk-size ${DATA_CHUNK_SIZE} ${AGENT_NAME} 
 }
 fi
 echo "========================="
